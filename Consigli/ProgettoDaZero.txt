@@ -1,6 +1,6 @@
 INIZIO
 ------
-Importare su eclipse il file "TemplateProgetto" (Usando import!)
+Importare su eclipse il file "TemplateProgetto" (MASSIMA ATTENZIONE A NON MODIFICARE I TEMPLATE!) 
 
 FILE ANT
 --------

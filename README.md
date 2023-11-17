@@ -16,6 +16,9 @@ Contiene una serie di esami svolti. Le sottocartelle devono essere rinominate in
 
 Contiene una serie di file che possono offrire dei pattern utili e frequenti, si consiglia di mantenere i pattern più generici possibile a discrezione dell'autore.
 
+> [!WARNING]
+> **Massima attenzione a non modificare i template permanentemente**, *copiare e incollare* prima dell'uso!.
+
 > [!IMPORTANT]
 > **Evidenziare** in maniera chiara le parti del template che vanno modificate, dando eventualmente suggerimenti commentati.
 
