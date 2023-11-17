@@ -41,3 +41,36 @@ Per garantire una comunicazione globale tra servlet vengono utilizzate due funzi
     this.getServletContext().setAttribute("varName", var);
     this.getServletContext().getAttribute("varName");
 ```
+
+COME USARLE
+-----------
+Le funzioni `this.getServletContext().getAttribute("varName");` e `this.getServletContext().getAttribute("varName");` possono essere facilmente integrate in un file .jsp e ciò consente di utilizzare classi apposite per il passaggio di informazioni tra Servlet (backend) e jsp (frontend).
+
+Per invece inizilizzare una servlet partendo da una pagina jsp può essere utile modificare `action` in moduli come
+```
+<!-- Esempio di form di login -->
+<form action="Home" method="post">
+    <p>User:</p>
+    <input type="text" name="userName" size="30"/><br>
+    <p>Password:</p>
+    <input type="password" name="pwd" size="30"/><br><br>
+    <input type="submit" value="Log In"/>
+</form>
+```
+```
+// Servlet per la gestione del log In
+public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		 
+	String u = req.getParameter("userName");
+	String p = req.getParameter("pwd");
+	if(u.compareTo("admin")==0 && p.compareTo("admin")==0)
+	{
+	    RequestDispatcher rd = this.getServletContext().getRequestDispatcher("admin.jsp");
+	    rd.forward(req, res);
+	    return;
+	}
+	RequestDispatcher rd = this.getServletContext().getRequestDispatcher("index.jsp");
+	rd.forward(req, res);
+	return;
+}
+```
