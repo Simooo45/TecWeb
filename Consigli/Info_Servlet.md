@@ -1,4 +1,4 @@
-COSA SONO
+Cosa sono?
 ---------
 Le servlet sono **classi Java che estendono `HttpServlet`**.  
 Non hanno un costruttore vero e proprio, ma esiste un metodo `init` che richiede come argomento una `Servlet Config`. Segue un esempio di servlet generica:
@@ -12,6 +12,14 @@ public class MyServlet extends HttpServlet{
 }
 ```  
 Oltre ad `init` esistono altri metodi essenziali per il funzionamento:  
+- `service()`:
+    ```
+    @Override
+	public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
+        ...
+    }
+    ```
+    Il metodo viene eseguito immediatamente dopo l'`init`
 - `doGet()`:
     ```
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
@@ -42,7 +50,7 @@ Per garantire una comunicazione globale tra servlet vengono utilizzate due funzi
     this.getServletContext().getAttribute("varName");
 ```
 
-COME USARLE
+Come usarle?
 -----------
 Le funzioni `this.getServletContext().getAttribute("varName");` e `this.getServletContext().getAttribute("varName");` possono essere facilmente integrate in un file .jsp e ciò consente di utilizzare classi apposite per il passaggio di informazioni tra Servlet (backend) e jsp (frontend).
 
