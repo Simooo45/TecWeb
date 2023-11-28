@@ -20,6 +20,14 @@ Esso è strutturati in diverse sottoparti, come esempio verrà considerato il fi
           A JSP-based to project to use as a template for your own ones
         </description>
     ```
+- Sono inizializzati dei parametri globali:
+    ```
+        <!-- Context attributes to be used throughout the application -->
+	    <context-param>
+		    <param-name>dir</param-name>
+		    <param-value>files</param-value>
+	    </context-param>
+    ```
 - In seguito vengono dichiarate le servlet e assieme ad esse anche la loro posizione ed eventuali parametri. Inoltre le servlet vengono poi mappate e ad ognuna deve essere assegnato un URL:
     ```
         <!-- Dichiarazione della servlet e dei suoi parametri -->
