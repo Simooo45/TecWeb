@@ -1,0 +1,31 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  input {
+    margin: 5px;
+  }
+  
+  .winning-result {
+    font-weight: bold;
+  }
+  
+  .background-yellow {
+    background-color: yellow;
+  }
+  
+  .background-green {
+    background-color: green;
+  }
+  
+  .background-blue {
+    background-color: blue;
+  }
+  
+  .background-red {
+    background-color: red;
+  }
